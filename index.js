@@ -8,13 +8,16 @@ app.get('/', (req, res) => {
 	var dataToSend;
 	const pyProg = spawn('python', ['script.py']);
 	pyProg.stdout.on('data', function (data) {
-		console.log('Streaming data from python script ...');
+		console.log('Pipe data from python script ...');
 		dataToSend = data.toString();
 	});
 
+	pyProg.on('close', (code) => {
+		console.log(`Child closed with code ${code}`);
+		res.send(dataToSend)
+	});
 	pyProg.on('exit', (code) => {
 		console.log(`Child exited with code ${code}`);
-		res.send(dataToSend)
 	});
 
 })
