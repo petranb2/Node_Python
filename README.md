@@ -2,7 +2,7 @@
 
 #Clone the exist repository
 
-git clone https://github.com/petranb2/node_python.git
+git clone https://github.com/petranb2/Node_Python.git
 
 
 #download packages
