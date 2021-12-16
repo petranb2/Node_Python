@@ -26,4 +26,4 @@ workflows:
     example-workflow:
       jobs:
         - node/run:
-            npm-run: node index.js 
+            npm-run: index.js 
